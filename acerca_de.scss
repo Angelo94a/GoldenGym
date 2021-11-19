@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans&family=Ubuntu:wght@500;700&display=swap');
+$principal: #181818;
+$secundario: #f1c40c;
+$gold1: #f4bd76;
+$gold2: #f6cd8f;
+$general: #efefef;
+$padding: 10px 15px;
+$color_shadow: #000;
+$gray: #c0c0c0;
+$font-family-title: 'Ubuntu', sans-serif;
+$font-family-body: 'Encode Sans', sans-serif;
+//estilos basicos
+.container{
+    width: 80%;
+    overflow: hidden;
+    margin: auto;
+    padding: 0;
+}
+body{
+    font-family: $font-family-body;
+    background: $principal;
+}
+//header
+
+.hero{
+    width: 100%;
+    min-height: 80vh;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) -100%), url(../img/banner_2.jpg);
+    background-position: center center;
+    background-size: cover;
+    .nav__hero{
+        font-size: 16px;
+        height: 4.37em;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        .nav__bar{
+            color: $gold2;
+            font-size: 1.25em;
+            display: none;
+        }
+    }
+    .nav__container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: inherit;
+        padding: 0;
+    }
+    .logo__name{
+        font-size: 1.5em;
+        color: $gold2;
+        font-family: $font-family-title;
+    }
+    .menu__links{
+        display: inline-block;
+        text-decoration: none;
+        color: $general;
+        font-weight: 300;
+        padding: $padding;
+        &:hover{
+            color: $gold2;
+        }
+    }
+    .menu--active{
+        color: $gold2;
+        font-weight: 700;
+    }
+    .hero__main{
+        .paragraph{
+            color: $general;
+            width: 80%;
+            padding: 0;
+            margin: auto;
+            text-align: center;
+            .paragraph__descripcion{
+                margin-top: 20vh;
+            }
+        }
+    }
+}
+
+//main
+.title{
+    color: $gold2;
+    font-family: $font-family-title;
+}
+.main__hero{
+    margin-top: 30px;
+    .cards{
+        margin-bottom: 30px;
+    }
+    .addre{
+        margin-top: 30px;
+    }
+}
+.cards__container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    font-size: 16px;
+    .cards__group{
+        width: 20%;
+        padding: 0.62em 0.93em ;
+        background: linear-gradient(180deg, #000 0%, #181818 100%);
+        border-radius: 0.62em;
+        box-shadow: 0 0 0.37em $color_shadow;
+    }
+    .cards__group-name{
+        color: $gold2;
+    }
+    .cards__grpup-img{
+        text-align: center;
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+    .cards__paragraph{
+        color: $general;
+    }
+}
+.addre__map{
+    margin-bottom: 0.62em;
+}
+/*----------------*/
+/*--- footer ---*/
+/*----------------*/
+.footer{
+    display: flex;
+    height: 100px;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    .social-media{
+        text-align: center;
+    }
+    .items__footer{
+        text-decoration: none;
+        color: $gold2;
+        padding: $padding;
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+    .copy{
+        text-align: center;
+        margin: 10px 10px;
+    }
+    .copy__footer{
+        color: $gold2;
+    }
+}
+ 
+@media screen and (max-width: 320px){
+    .container{
+        width: 99%;
+    }
+    .hero{
+        background: $principal;
+        min-height: 400px;
+        .nav__hero{
+            .nav__bar{
+                display: block;
+            }
+        }
+        .menu{
+            position: absolute;
+            background-color: $principal;
+            left: 0;
+            top: 80px;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: space-evenly;
+            text-align: center;
+            flex-direction: column;
+            transform: translateX(-100%);
+            transition: all 0.5s ease;
+        }
+        .mostrar{
+            transform: translate(0%);
+        }
+    }
+
+    .main__hero{
+        .cards__container{
+            width: 100%;
+            .cards__group{
+                width: 100%;
+                flex-wrap: wrap;
+                margin-bottom: 10px;
+            }
+        }
+        .addre{
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .container{
+        width: 80%;
+    }
+    .hero{
+        min-height: 400px;
+    }
+    .main__hero{
+        .cards__container{
+            .cards__group{
+                width: 50%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .container{
+        width: 80%;
+    }
+    .hero{
+        min-height: 400px;
+    }
+    .main__hero{
+        .cards__container{
+            .cards__group{
+                width: 20%;
+            }
+        }
+    }
+}

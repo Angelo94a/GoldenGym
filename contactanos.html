@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctanos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/contactanos.css">
+</head>
+<body>
+    <header class="hero">
+        <nav class="nav__hero">
+            <div class="container nav__container">
+                <div class="nav__bar" id="btnMenu">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <div class="logo">
+                    <h2 class="logo__name">GoldenGym</h2>
+                </div>
+                <div class="menu" id="menu">
+                    <a href="index.html" class="menu__links ">Inicio</a>
+                    <a href="acerca_de.html" class="menu__links">Acerca de</a>
+                    <a href="contactanos.html" class="menu__links menu--active">Contáctanos</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container main-hero">
+            <div class="contacto">
+                <div class="contactanos__grupo">
+                    <h1 class="contactanos__title">Contactanos</h1>
+                    <p class="contactanos__paragrph">Par más información de rutinas planes de alimentacióm, horarios y mas; por favor contactenos atraves de este formulario.</p>
+                </div>
+                <div class="contactanos__grupo">
+                    <h3 class="contactanos__title">Para tener en cuenta</h3>
+                    <p class="contactanos__paragrph">La información aquí suministrada, solo sera utilizada con fines informativo. La empresa no incurrira en el delito de distribusión ilegal de los datos personales suministrado por el cliente.</p>
+                </div>
+            </div>
+            
+            <!----- formulario ----->
+            <form action="formulario.php" method="post" class="formulario" id="formulario">
+                <div class="container--form">
+                    <div class="formulario__grupo" id="grupo__nombre">
+                        <label for="nombre" class="formulario__label">Nombre</label>
+                        <div class="formulario__grupo-input">
+                            <input type="text" name="nombre" id="nombre" class="formulario__input" placeholder="John">
+                            <i class="formulario__validacion-estado bx bx-x"></i>
+                        </div>
+                        <p class="formulario__input-error">El nombre solo puede contener ("a" y "A")</p>
+                    </div>
+                    <div class="formulario__grupo" id="grupo__apellido">
+                        <label for="apellido" class="formulario__label">Apellido</label>
+                        <div class="formulario__grupo-input">
+                            <input type="text" name="apellido" id="apellido" class="formulario__input" placeholder="Doe">
+                            <i class="formulario__validacion-estado bx bx-x"></i>
+                        </div>
+                        <p class="formulario__input-error">El apellido solo puede contener ("a" y "A")</p>
+                    </div>
+                    <div class="formulario__grupo" id="grupo__correo">
+                        <label for="correo" class="formulario__label">Correo</label>
+                        <div class="formulario__grupo-input">
+                            <input type="email" name="correo" id="correo" class="formulario__input" placeholder="johndoe@corro.com">
+                            <i class="formulario__validacion-estado bx bx-x"></i>
+                        </div>
+                        <p class="formulario__input-error">El correo solo puede contener ("a","1,2,3" y "-,_")</p>
+                    </div>
+                    <div class="formulario__grupo" id="grupo__telefono">
+                        <label for="telefono" class="formulario__label">Teléfono</label>
+                        <div class="formulario__grupo-input">
+                            <input type="text" name="telefono" id="telefono" class="formulario__input" placeholder="3228569877">
+                            <i class="formulario__validacion-estado bx bx-x"></i>
+                        </div>
+                        <p class="formulario__input-error">El Teléfono solo tuede tener de 6 a 10 dijitos</p>
+                    </div>
+                    <div class="formulario__grupo formulario__grupo--mensaje" id="grupo__mensaje">
+                        <label for="mensaje" class="formulario__label"></label>
+                        <textarea name="mensaje" id="formulario__textarea"  class="formulario__textarea" rows="4" cols="25" placeholder="Escribe un mensaje"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-button">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container container--footer">
+            <div class="social-media">
+                <a href="#" class="items__footer"><i class='fab fa-facebook' ></i></a>
+                <a href="#" class="items__footer"><i class='fab fa-instagram' ></i></a>
+                <a href="#" class="items__footer"><i class='fab fa-youtube' ></i></a>
+                <a href="#" class="items__footer"><i class='fab fa-linkedin-in' ></i></a>
+            </div>
+            <div class="copy">
+                <span class="copy__footer">© sport fit | todos los derechos reserbados</span>
+            </div>
+        </div>
+    </footer>
+    <script src="js/menu.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

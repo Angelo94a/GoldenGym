@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans&family=Ubuntu:wght@500;700&display=swap');
+$principal: #181818;
+$secundario: #f1c40c;
+$gold1: #f4bd76;
+$gold2: #f6cd8f;
+$general: #efefef;
+$padding: 10px 15px;
+$color_shadow: #000;
+$gray: #c0c0c0;
+$font-family-title: 'Ubuntu', sans-serif;
+$font-family-body: 'Encode Sans', sans-serif;
+
+//estilos basicos
+.container {
+    width: 80%;
+    max-width: 1092px;
+    margin: 0 auto;
+    overflow: hidden;
+    height: auto;
+}
+body {
+    font-family: $font-family-body;
+    background-color: $principal;
+    color: $general;
+}
+
+//header
+
+.hero{
+    .nav__hero{
+        height: 4.37em;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        .nav__bar{
+            display: none;
+        }
+    }
+    .nav__container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0;
+        height: inherit;
+    }
+    .logo__name{
+        font-size: 1.5em;
+        font-family: $font-family-title;
+        color: $gold2;
+    }
+    .menu__links{
+        display: inline-block;
+        text-decoration: none;
+        color: $general;
+        font-weight: 300;
+        padding: $padding;
+        &:hover{
+            color: $gold2;
+        }
+    }
+    .menu--active{
+        color: $gold2;
+        font-weight: 700;
+    }
+}
+//main
+.main-hero{
+    display: flex;
+    .contacto{
+        font-size: 16px;
+        .contactanos__grupo {
+            width: 28.93em;
+        }
+        .contactanos__title {
+            color: $gold2;
+        }
+    }
+}
+//formulario
+.main-hero{
+    .formulario {
+        margin-top: 30px;
+        display: block;
+        padding: 10px;
+        cursor: pointer;
+        width: 21.37em;
+        height: auto;
+        padding: 20px 30px;
+        margin-bottom: 30px;
+        .formulario__grupo-input {
+            position: relative;
+            margin-bottom: 10px;
+        }
+       .formulario__input {
+            width: 80%;
+            height: 2.5em;
+            border: 3px solid transparent;
+            border-radius: 3px;
+            line-height: 40px;
+            padding: 0 40px 0 10px;
+            transition: .3s ease all;
+        }
+        .formulario__input:focus {
+            border: 3px solid $gold2;
+            outline: none;
+            box-shadow: 3px 0 30px rgba(163, 163, 163, .5);
+        }
+        .formulario__input-error {
+            font-size: 12px;
+            margin-bottom: 0;
+            display: none;
+        }
+        .formulario__input-error-acive {
+            display: block;
+        }
+        .formulario__validacion-estado {
+            position: absolute;
+            right: 10px;
+            top: 15px;
+            color: red;
+            z-index: 100;
+            font-size: 16px;
+            opacity: 0;
+        }
+        .formulario__grupo--mensaje {
+            display: flex;
+            margin-bottom: 10px;
+        }
+        .formulario__textarea:focus {
+            resize: none;
+            border: 3px solid $gold2;
+            outline: none;
+            box-shadow: 3px 0 30px rgba(163, 163, 163, .5);
+        }
+        .btn-button{
+            border: none;
+            padding: $padding;
+            background-color: $gold2;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: .3s ease all;
+            font-size: 1.12em;
+            &:hover{
+                background: #ffffff;
+                color: #2D2D30;
+            }
+        }
+    }     
+}
+//footer
+.footer{
+    display: flex;
+    height: 100px;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    .social-media{
+        text-align: center;
+    }
+    .items__footer{
+        text-decoration: none;
+        color: $gold2;
+        padding: $padding;
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+    .copy{
+        text-align: center;
+        margin: 10px 10px;
+    }
+    .copy__footer{
+        color: $gold2;
+    }
+}
+
+//responsive
+
+@media screen and (max-width: 480px){
+    .container{
+        width: 97%;
+    }
+    .hero{
+        background: $principal;
+        .nav__hero{
+            .nav__bar{
+                display: block;
+                font-size: 20px;
+                color: $gold2;
+            }
+        }
+        .menu{
+            position: absolute;
+            background-color: $principal;
+            left: 0;
+            top: 80px;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: space-evenly;
+            text-align: center;
+            flex-direction: column;
+            transform: translateX(-100%);
+            transition: all 0.5s ease;
+            z-index: 1000;
+        }
+        .mostrar{
+            transform: translate(0%);
+        }
+    }
+    .main-hero{
+        display: flex;
+        flex-direction: column;
+        .contacto{
+            width: 100%;
+            .contactanos__grupo{
+                width: 100%;
+            }
+            .formulario{
+                width: 100%;
+                .formulario__grupo-input {
+                    width: 100px;
+                }
+            }
+        }
+    }   
+}
+
+@media screen and (max-width: 1024px) {
+    .container{
+        width: 80%;
+    }
+    .hero{
+        background: $principal;
+        .nav__hero{
+            .nav__bar{
+                display: block;
+                font-size: 20px;
+                color: $gold2;
+            }
+        }
+        .menu{
+            position: absolute;
+            background-color: $principal;
+            left: 0;
+            top: 80px;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: space-evenly;
+            text-align: center;
+            flex-direction: column;
+            transform: translateX(-100%);
+            transition: all 0.5s ease;
+            z-index: 1000;
+        }
+        .mostrar{
+            transform: translate(0%);
+        }
+    }
+    .main-hero{
+        flex-direction: column;
+        .contacto{
+            width: 100%;
+            .contactanos__grupo{
+                max-width: 100%;
+            }
+            .formulario{
+                max-width: 100%;
+                .formulario__grupo-input {
+                    width: 100px;
+                }
+            }
+        }
+    }   
+}
